@@ -1,0 +1,23 @@
+# Dependencias y compilación
+node_modules/
+dist/
+coverage/
+*.local
+
+# Informes de la prueba masiva (se generan con npm run test:masiva)
+informes/
+
+# Variables de entorno
+.env
+.env.*
+
+# Registros
+npm-debug.log*
+*.log
+
+# Sistema operativo y editores
+.DS_Store
+.vscode/*
+!.vscode/extensions.json
+.idea/
+.claude/settings.local.json
