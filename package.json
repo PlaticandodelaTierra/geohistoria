@@ -1,0 +1,42 @@
+{
+  "name": "geohistoria",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Rompecabezas de edad relativa: ordena los eventos de una sección geológica generada al azar.",
+  "license": "MIT",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:masiva": "vitest run --config vitest.masiva.config.js",
+    "ejemplos": "node scripts/ejemplos.js"
+  },
+  "devDependencies": {
+    "vite": "^8.3.8",
+    "vitest": "^5.1.2"
+  },
+  "dependencies": {
+    "d3-contour": "^4.0.3",
+    "jspdf": "^4.2.1",
+    "svg2pdf.js": "^2.9.0"
+  },
+  "author": "Darío Torres Sánchez",
+  "homepage": "https://platicandodelatierra.github.io/geohistoria/",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PlaticandodelaTierra/geohistoria.git"
+  },
+  "keywords": [
+    "geology",
+    "earth-science",
+    "education",
+    "stratigraphy",
+    "relative-dating",
+    "geoscience-education",
+    "spanish",
+    "educational-game"
+  ]
+}

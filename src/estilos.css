@@ -1,0 +1,838 @@
+/* Estilos provisionales de la galería de desarrollo (fase 1). */
+
+:root {
+  font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  color: #1d1d1d;
+  background: #f7f6f2;
+  line-height: 1.45;
+}
+
+body {
+  margin: 0;
+}
+
+main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1.5rem 1rem 3rem;
+}
+
+h1 {
+  margin: 0 0 0.25rem;
+  font-size: 1.6rem;
+}
+
+header p {
+  margin: 0 0 1.5rem;
+  color: #444;
+}
+
+.galeria {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 900px) {
+  .galeria {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+figure {
+  margin: 0;
+  padding: 1rem;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+.dibujo svg {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+figcaption h2 {
+  margin: 0.75rem 0 0.25rem;
+  font-size: 1.15rem;
+}
+
+figcaption p {
+  margin: 0 0 0.5rem;
+  color: #444;
+}
+
+.historia {
+  margin: 0;
+  padding-left: 1.5rem;
+  font-size: 0.9rem;
+}
+
+.muestra {
+  display: inline-block;
+  width: 1.1em;
+  height: 1.1em;
+  margin-right: 0.4em;
+  vertical-align: -0.2em;
+  border: 1px solid #333;
+}
+
+.muestra.linea {
+  height: 0;
+  border: 0;
+  border-top: 4px solid #111;
+  vertical-align: 0.25em;
+}
+
+.muestra.linea.erosion {
+  border-top-width: 3px;
+}
+
+.muestra.simbolo {
+  border: 0;
+  text-align: center;
+  line-height: 1.1em;
+}
+
+/* Fase 2: evidencias y orden */
+
+figcaption h3 {
+  margin: 1rem 0 0.35rem;
+  font-size: 0.95rem;
+}
+
+.evidencias {
+  margin: 0;
+  padding-left: 1.1rem;
+  font-size: 0.85rem;
+}
+
+.evidencias li {
+  margin-bottom: 0.3rem;
+}
+
+.principio {
+  display: inline-block;
+  padding: 0 0.4em;
+  border: 1px solid #888;
+  border-radius: 3px;
+  font-size: 0.8em;
+  white-space: nowrap;
+}
+
+.principio.superposicion {
+  background: #eef4e6;
+}
+
+.principio.relaciones-de-corte {
+  background: #f9ebe4;
+}
+
+.principio.horizontalidad-original {
+  background: #e7eef8;
+}
+
+.orden {
+  margin: 0;
+  font-weight: 600;
+}
+
+ol.orden {
+  padding-left: 1.5rem;
+  font-size: 0.9rem;
+}
+
+.etiqueta {
+  display: inline-block;
+  padding: 0 0.45em;
+  border-radius: 999px;
+  background: #e3efe0;
+  color: #1f4d17;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.etiqueta.aviso {
+  background: #fbf0d4;
+  color: #6b4a00;
+}
+
+.alerta {
+  padding: 0.5rem 0.75rem;
+  border: 1px solid #b3261e;
+  border-radius: 6px;
+  background: #fdecea;
+  color: #7a1a14;
+}
+
+/* Fase 3: navegación de desarrollo y generador */
+
+.navegacion {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem 1rem;
+  margin: 0.25rem 0 0.75rem;
+}
+
+.navegacion a {
+  color: #1a4f8a;
+}
+
+.navegacion a[aria-current='page'] {
+  color: #1d1d1d;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.controles {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem 1rem;
+  margin: 0 0 1.5rem;
+}
+
+.controles input {
+  width: 7em;
+}
+
+.controles select,
+.controles input,
+.controles button {
+  font: inherit;
+  padding: 0.2rem 0.5rem;
+}
+
+@media (min-width: 1300px) {
+  main:has(.generadas) {
+    max-width: 1500px;
+  }
+
+  .galeria.generadas {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+.datos {
+  margin: 0.5rem 0 0.25rem;
+  color: #555;
+  font-size: 0.85rem;
+}
+
+details {
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+}
+
+summary {
+  cursor: pointer;
+  color: #1a4f8a;
+}
+
+/* ───────── Fase 4: modo práctica ───────── */
+
+.solo-lectores {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+.cabecera h1 {
+  margin: 0;
+}
+
+.subtitulo {
+  margin: 0 0 1rem;
+  color: #444;
+}
+
+:focus-visible {
+  outline: 3px solid #1a5fb4;
+  outline-offset: 2px;
+}
+
+button {
+  font: inherit;
+  cursor: pointer;
+}
+
+button.principal,
+button.secundario {
+  padding: 0.45rem 1rem;
+  border-radius: 6px;
+  border: 1px solid #1a4f8a;
+}
+
+button.principal {
+  background: #1a4f8a;
+  color: #fff;
+  font-weight: 600;
+}
+
+button.secundario {
+  background: #fff;
+  color: #1a4f8a;
+}
+
+/* Elegir nivel */
+
+.niveles {
+  display: grid;
+  gap: 0.75rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  max-width: 40rem;
+}
+
+.niveles a.nivel {
+  display: block;
+  padding: 0.9rem 1rem;
+  border: 1px solid #c9c4b8;
+  border-radius: 8px;
+  background: #fff;
+  color: inherit;
+  text-decoration: none;
+}
+
+.niveles a.nivel:hover {
+  border-color: #1a4f8a;
+}
+
+.niveles a.nivel strong {
+  display: block;
+  font-size: 1.1rem;
+  color: #1a4f8a;
+}
+
+/* Barra del ejercicio */
+
+.barra {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem 0.9rem;
+  margin-bottom: 1rem;
+}
+
+.barra select {
+  font: inherit;
+  padding: 0.25rem 0.4rem;
+}
+
+.semilla {
+  color: #444;
+}
+
+.aviso-enlace {
+  flex-basis: 100%;
+  color: #1f4d17;
+  font-size: 0.9rem;
+  overflow-wrap: anywhere;
+}
+
+.aviso-enlace:empty {
+  display: none;
+}
+
+/* Sección y tarjetas */
+
+.zona-ejercicio {
+  display: grid;
+  gap: 1rem;
+  align-items: start;
+}
+
+@media (min-width: 900px) {
+  .zona-ejercicio {
+    grid-template-columns: minmax(0, 1.7fr) minmax(18rem, 1fr);
+  }
+}
+
+.seccion-practica {
+  margin: 0;
+  padding: 0.5rem;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+.seccion-practica svg {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* Resaltado tarjeta ↔ unidad: lo resaltado con contorno grueso y el resto atenuado. */
+.seccion-practica svg .unidad,
+.seccion-practica svg .falla,
+.seccion-practica svg .discordancia,
+.seccion-practica svg .simbolo,
+.seccion-practica svg .etiquetas text {
+  transition: opacity 0.12s;
+}
+
+.seccion-practica svg.resaltando .unidad:not(.activo),
+.seccion-practica svg.resaltando .falla:not(.activo),
+.seccion-practica svg.resaltando .discordancia:not(.activo),
+.seccion-practica svg.resaltando .simbolo:not(.activo),
+.seccion-practica svg.resaltando .etiquetas text:not(.activo) {
+  opacity: 0.3;
+}
+
+.seccion-practica svg .unidad.activo {
+  stroke: #000;
+  stroke-width: 4;
+}
+
+.seccion-practica svg .falla.activo,
+.seccion-practica svg .discordancia.activo {
+  stroke: #c2410c;
+  stroke-width: 7;
+}
+
+.seccion-practica svg .simbolo.activo circle {
+  stroke: #c2410c;
+  stroke-width: 4;
+}
+
+.panel {
+  display: grid;
+  gap: 0.6rem;
+}
+
+.instrucciones {
+  margin: 0;
+  font-size: 0.95rem;
+}
+
+.extremo {
+  margin: 0;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #555;
+}
+
+.lista-tarjetas {
+  display: grid;
+  gap: 0.4rem;
+  margin: 0.3rem 0;
+  padding: 0;
+  list-style: none;
+}
+
+.tarjeta {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.35rem 0.4rem 0.35rem 0.3rem;
+  background: #fff;
+  border: 2px solid #8a857a; /* contraste ≥ 3:1 con el fondo (WCAG 1.4.11) */
+  border-radius: 8px;
+  user-select: none;
+  -webkit-user-select: none;
+  cursor: grab;
+}
+
+.tarjeta.resaltada {
+  border-color: #c2410c;
+  background: #fff7ed;
+}
+
+.tarjeta.arrastrando {
+  position: relative;
+  z-index: 2;
+  cursor: grabbing;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.18);
+}
+
+.tarjeta .asa {
+  padding: 0.3rem 0.35rem;
+  color: #777;
+  font-size: 1.2rem;
+  line-height: 1;
+  touch-action: none;
+  cursor: grab;
+}
+
+.tarjeta .letra {
+  min-width: 1.6em;
+  font-size: 1.2rem;
+  font-weight: 700;
+  text-align: center;
+}
+
+.tarjeta .nombre {
+  flex: 1;
+}
+
+.tarjeta .marca {
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.tarjeta.bien {
+  border-color: #2e7d32;
+  background: #edf7ee;
+}
+
+.tarjeta.bien .marca {
+  color: #1f6a23;
+}
+
+.tarjeta.mal {
+  border-color: #b3261e;
+  background: #fdecea;
+}
+
+.tarjeta.mal .marca {
+  color: #9b1c15;
+}
+
+.tarjeta button.mover {
+  width: 2.2rem;
+  height: 2.2rem;
+  border: 1px solid #8a857a;
+  border-radius: 6px;
+  background: #f7f6f2;
+  color: #1d1d1d;
+  font-size: 1.05rem;
+}
+
+.tarjeta button.mover:disabled {
+  opacity: 0.35;
+  cursor: default;
+}
+
+/* Revisión */
+
+.revision {
+  margin-top: 1.25rem;
+  max-width: 60rem;
+}
+
+.revision:empty {
+  display: none;
+}
+
+.revision h2.resultado {
+  margin: 0 0 0.4rem;
+  font-size: 1.2rem;
+}
+
+.revision h2.correcto {
+  color: #1f6a23;
+}
+
+.revision .evidencias {
+  font-size: 0.92rem;
+}
+
+ol.solucion {
+  margin: 0 0 0.75rem;
+  font-weight: 600;
+}
+
+/* Mientras se arrastra, las demás tarjetas se apartan con suavidad. */
+.lista-tarjetas.ordenando .tarjeta:not(.arrastrando) {
+  transition: transform 0.12s ease;
+}
+
+/* ───────── Fase 5: estilo de libro de texto ───────── */
+
+/* Leyenda de la sección */
+.leyenda ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem 1rem;
+  margin: 0.5rem 0 0;
+  padding: 0;
+  list-style: none;
+  font-size: 0.85rem;
+}
+
+.leyenda li {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.muestra-leyenda svg {
+  display: block;
+  width: 40px;
+  height: 25px;
+}
+
+/* La flecha de cada falla se resalta junto con su línea. */
+.seccion-practica svg.resaltando .flecha:not(.activo) {
+  opacity: 0.3;
+}
+
+.seccion-practica svg .flecha.activo {
+  stroke: #c2410c;
+}
+
+/* En pantallas angostas la sección se reduce mucho: letras más grandes y líneas más gruesas (en unidades
+   de la sección), para que sigan leyéndose. Las etiquetas se colocaron pensando en este tamaño. */
+@media (max-width: 600px) {
+  svg.seccion .etiquetas {
+    font-size: 38px;
+  }
+
+  svg.seccion .etiquetas .halos {
+    stroke-width: 7px;
+  }
+
+  svg.seccion .simbolos {
+    font-size: 26px;
+  }
+
+  svg.seccion .unidad {
+    stroke-width: 2.4px;
+  }
+
+  svg.seccion .falla {
+    stroke-width: 7px;
+  }
+
+  svg.seccion .discordancia {
+    stroke-width: 5.5px;
+  }
+
+  svg.seccion .flecha {
+    stroke-width: 4.5px;
+  }
+
+  svg.seccion pattern path,
+  svg.seccion pattern ellipse,
+  svg.seccion pattern g circle {
+    stroke-width: 2.2px;
+  }
+
+  .tarjeta button.mover {
+    width: 44px;
+    height: 44px;
+  }
+}
+
+/* ───────── Fase 6: navegación, profesor, reto y principios ───────── */
+
+.modos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem 1.1rem;
+  margin: 0 0 1.25rem;
+  padding-bottom: 0.6rem;
+  border-bottom: 1px solid #ddd8cc;
+}
+
+.modos a {
+  color: #1a4f8a;
+  font-weight: 600;
+}
+
+.modos a[aria-current='page'] {
+  color: #1d1d1d;
+  text-decoration: none;
+}
+
+.explicacion {
+  max-width: 48rem;
+  color: #333;
+}
+
+a.principio {
+  color: inherit;
+  text-decoration: none;
+}
+
+a.principio:hover,
+a.principio:focus-visible {
+  text-decoration: underline;
+}
+
+/* Profesor */
+.resumen-hoja {
+  margin: 1rem 0 0.5rem;
+  font-weight: 600;
+}
+
+.estado-pdf {
+  min-height: 1.4em;
+  color: #1f4d17;
+}
+
+.galeria.hoja figure {
+  margin: 0;
+}
+
+.galeria.hoja .eventos {
+  font-size: 0.85rem;
+  color: #333;
+}
+
+.galeria.hoja h3 {
+  margin: 0.5rem 0 0.25rem;
+}
+
+/* Reto */
+.racha {
+  font-weight: 600;
+}
+
+.aviso-reto {
+  padding: 0.5rem 0.75rem;
+  border-radius: 6px;
+  background: #fbf0d4;
+  color: #5a3d00;
+}
+
+.resultado-reto:empty {
+  display: none;
+}
+
+.resultado-reto {
+  margin: 0 0 1.25rem;
+  padding: 0.75rem 1rem;
+  border: 1px solid #c9c4b8;
+  border-radius: 8px;
+  background: #fff;
+}
+
+.resultado-reto h2 {
+  margin: 0 0 0.5rem;
+  font-size: 1.15rem;
+}
+
+.vista-previa-titulo {
+  margin: 0.75rem 0 0.25rem;
+  font-size: 0.85rem;
+  color: #555;
+}
+
+pre.vista-previa {
+  margin: 0;
+  padding: 0.5rem 0.75rem;
+  background: #f7f6f2;
+  border-radius: 6px;
+  font-family: inherit;
+  white-space: pre-wrap;
+}
+
+/* Principios */
+.indice-principios {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem 1rem;
+  margin-bottom: 1.25rem;
+}
+
+.principios {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.principio-tarjeta {
+  display: grid;
+  gap: 0.75rem 1.25rem;
+  padding: 1rem;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  scroll-margin-top: 1rem;
+}
+
+.principio-tarjeta h3 {
+  margin: 0;
+  font-size: 1.25rem;
+}
+
+@media (min-width: 900px) {
+  .principio-tarjeta {
+    grid-template-columns: minmax(0, 1.4fr) minmax(16rem, 1fr);
+  }
+
+  .principio-tarjeta h3 {
+    grid-column: 1 / -1;
+  }
+}
+
+.texto-principio .autor {
+  margin-top: 0;
+  color: #555;
+  font-style: italic;
+}
+
+.texto-principio h4 {
+  margin: 0.75rem 0 0.25rem;
+}
+
+.enlace-practicar {
+  display: inline-block;
+  margin-top: 0.5rem;
+  font-weight: 600;
+  color: #1a4f8a;
+}
+
+/* ───────── Fase 7: idioma y accesibilidad ───────── */
+
+/* "Saltar al contenido": invisible hasta que recibe el foco con el teclado. */
+.saltar {
+  position: absolute;
+  left: 0.5rem;
+  top: -3rem;
+  z-index: 10;
+  padding: 0.4rem 0.8rem;
+  border-radius: 6px;
+  background: #1a4f8a;
+  color: #fff;
+  font-weight: 600;
+}
+
+.saltar:focus {
+  top: 0.5rem;
+}
+
+.fila-titulo {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem 1rem;
+}
+
+.idiomas {
+  display: flex;
+  gap: 0.25rem;
+}
+
+button.idioma {
+  padding: 0.2rem 0.6rem;
+  border: 1px solid #8a857a;
+  border-radius: 999px;
+  background: #fff;
+  color: #1d1d1d;
+  font-size: 0.85rem;
+}
+
+button.idioma[aria-pressed='true'] {
+  border-color: #1a4f8a;
+  background: #1a4f8a;
+  color: #fff;
+  font-weight: 600;
+}
+
+/* Sin animaciones para quien las desactivó en su sistema. */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    transition: none !important;
+    animation: none !important;
+    scroll-behavior: auto !important;
+  }
+}

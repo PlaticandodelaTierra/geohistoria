@@ -1,0 +1,32 @@
+cff-version: 1.2.0
+title: "GeoHistoria: relative-age puzzles with geologic cross-sections"
+message: >-
+  If you use GeoHistoria in your teaching or in a publication, please cite
+  it as below.
+type: software
+authors:
+  - given-names: Darío
+    family-names: Torres Sánchez
+version: 1.0.0
+license: MIT
+repository-code: "https://github.com/PlaticandodelaTierra/geohistoria"
+url: "https://platicandodelatierra.github.io/geohistoria/"
+abstract: >-
+  A web application, with no installation and no server, that generates
+  random but reproducible geologic cross-sections (layers, faults, dikes,
+  tilting and unconformities) and asks the user to order the events from
+  oldest to youngest. Every answer can be deduced only from what is visible
+  in the section, and the feedback explains which principle (superposition,
+  cross-cutting relationships, original horizontality) proves each
+  relationship. It includes practice and daily-challenge modes, a teacher
+  mode that produces exercise sheets and answer keys in PDF from fixed
+  seeds, and a Spanish and English interface.
+keywords:
+  - geology
+  - earth science
+  - education
+  - stratigraphy
+  - relative dating
+  - geoscience education
+  - Spanish
+  - educational game
